@@ -1,3 +1,10 @@
+# ignore everything in the bin folder
+bin/
+
+# ignore everything in the obj folder
+obj/
+
+
 # Compiled Object files
 *.slo
 *.lo

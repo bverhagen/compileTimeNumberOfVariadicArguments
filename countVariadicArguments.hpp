@@ -1,7 +1,8 @@
-#include <cstdint>
+#include <cstdlib>
 
 namespace variadic {
-	template <typename... T> uint32_t countArguments(T... t1) {
+	template <typename... T> 
+	constexpr size_t countArguments(const T&... t1) {
 		return sizeof...(T);
 	}
 };

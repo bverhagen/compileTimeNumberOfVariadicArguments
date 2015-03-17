@@ -46,7 +46,9 @@ template <typename... T>
 class VariadicArgumentTemplate {
     public:
         VariadicArgumentTemplate(T... t1) : _nbOfArguments(countArguments(t1...)) {
-            ;
+			// To check if we are indeed evaluating the number of arguments at compile time,
+			// we use it in a static_assert that is always true
+			static_assert(countArguments(t1...) == countArguments(t1...), "Checking whether the function call is evaluated at compile time.");
         }
         uint32_t getNbOfArguments(void) {
             return _nbOfArguments;

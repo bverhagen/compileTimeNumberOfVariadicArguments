@@ -4,7 +4,6 @@ bin/
 # ignore everything in the obj folder
 obj/
 
-
 # Compiled Object files
 *.slo
 *.lo
@@ -33,3 +32,6 @@ obj/
 *.exe
 *.out
 *.app
+
+# Ignore vim tmps
+*.swp
